@@ -1,0 +1,67 @@
+using UnityEngine;
+using System.Runtime.InteropServices;
+using System;
+using System.Collections;
+using Unity.VisualScripting;
+// Note to self: This is for me to learn it fully.
+public class WindowMover : MonoBehaviour
+{
+    // DllImport for user32.dll functions
+    [DllImport("user32.dll", EntryPoint = "MoveWindow")]
+    private static extern bool MoveWindow(IntPtr hWnd, int X, int Y, int nWidth, int nHeight, bool bRepaint);
+    [DllImport("user32.dll")]
+    private static extern IntPtr GetActiveWindow();
+    [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+    private static extern int GetSystemMetrics(int nIndex);
+
+    // Constants for GetSystemMetrics
+    private const int SM_CXSCREEN = 0;
+    private const int SM_CYSCREEN = 1;
+
+    private IntPtr windowHandle;
+    public int windowWidth;
+    public int windowHeight;
+
+    private void Awake()
+    {
+        Screen.fullScreen = false;
+    }
+    void Start()
+    {
+        // Get the handle to the current window
+        windowHandle = GetActiveWindow();
+
+        if (windowHandle != IntPtr.Zero)
+        {
+            // Set the window to a known initial size for consistent movement
+            windowWidth = Screen.width;
+            windowHeight = Screen.height;
+            MoveWindow(windowHandle, 0, 0, windowWidth, windowHeight, true);
+
+            // Start the random movement coroutine
+            StartCoroutine(RandomlyMoveWindow());
+        }
+    }
+
+    IEnumerator RandomlyMoveWindow()
+    {
+        while (true)
+        {
+            // Get screen dimensions
+            int screenWidth = GetSystemMetrics(SM_CXSCREEN);
+            int screenHeight = GetSystemMetrics(SM_CYSCREEN);
+
+            // Calculate random coordinates within screen boundaries
+            // We subtract window dimensions to keep the entire window visible
+            int randomX = UnityEngine.Random.Range(0, screenWidth - windowWidth);
+            int randomY = UnityEngine.Random.Range(0, screenHeight - windowHeight);
+
+            // Move the window to the new random position
+            MoveWindow(windowHandle, randomX, randomY, windowWidth, windowHeight, true);
+
+            // Wait for a random duration before moving again
+            float moveDelay = UnityEngine.Random.Range(1f, 3f);
+            yield return new WaitForSeconds(moveDelay);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+﻿  pch.cpp
+  dllmain.cpp
+  ScreenLibrabry.cpp
+  Generating Code...
+E:\VGD\1721000 - EthanJKarban\Extra\W-32\Assets\Screen\Screen\ScreenLibrabry.cpp(15,6): warning C4273: 'fibonacci_init': inconsistent dll linkage
+  (compiling source file '/ScreenLibrabry.cpp')
+      E:\VGD\1721000 - EthanJKarban\Extra\W-32\Assets\Screen\Screen\Screenh.h(22,33):
+      see previous definition of 'fibonacci_init'
+  
+E:\VGD\1721000 - EthanJKarban\Extra\W-32\Assets\Screen\Screen\ScreenLibrabry.cpp(26,6): warning C4273: 'fibonacci_next': inconsistent dll linkage
+  (compiling source file '/ScreenLibrabry.cpp')
+      E:\VGD\1721000 - EthanJKarban\Extra\W-32\Assets\Screen\Screen\Screenh.h(28,33):
+      see previous definition of 'fibonacci_next'
+  
+E:\VGD\1721000 - EthanJKarban\Extra\W-32\Assets\Screen\Screen\ScreenLibrabry.cpp(47,20): warning C4273: 'fibonacci_current': inconsistent dll linkage
+  (compiling source file '/ScreenLibrabry.cpp')
+      E:\VGD\1721000 - EthanJKarban\Extra\W-32\Assets\Screen\Screen\Screenh.h(31,47):
+      see previous definition of 'fibonacci_current'
+  
+E:\VGD\1721000 - EthanJKarban\Extra\W-32\Assets\Screen\Screen\ScreenLibrabry.cpp(53,10): warning C4273: 'fibonacci_index': inconsistent dll linkage
+  (compiling source file '/ScreenLibrabry.cpp')
+      E:\VGD\1721000 - EthanJKarban\Extra\W-32\Assets\Screen\Screen\Screenh.h(34,37):
+      see previous definition of 'fibonacci_index'
+  
+     Creating library E:\VGD\1721000 - EthanJKarban\Extra\W-32\Assets\Screen\x64\Debug\Screen.lib and object E:\VGD\1721000 - EthanJKarban\Extra\W-32\Assets\Screen\x64\Debug\Screen.exp
+  Screen.vcxproj -> E:\VGD\1721000 - EthanJKarban\Extra\W-32\Assets\Screen\x64\Debug\Screen.dll
