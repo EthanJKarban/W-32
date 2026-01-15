@@ -3,9 +3,15 @@ using System.Runtime.InteropServices;
 using System;
 using System.Collections;
 using Unity.VisualScripting;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Events;
 // Note to self: This is for me to learn it fully.
 public class WindowMover : MonoBehaviour
 {
+    public UnityEvent onClick;
+    public int targetWidth = 800;
+    public int targetHeight = 600;
+
     // DllImport for user32.dll functions
     [DllImport("user32.dll", EntryPoint = "MoveWindow")]
     private static extern bool MoveWindow(IntPtr hWnd, int X, int Y, int nWidth, int nHeight, bool bRepaint);
@@ -13,6 +19,9 @@ public class WindowMover : MonoBehaviour
     private static extern IntPtr GetActiveWindow();
     [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
     private static extern int GetSystemMetrics(int nIndex);
+    
+
+
 
     // Constants for GetSystemMetrics
     private const int SM_CXSCREEN = 0;
@@ -24,7 +33,9 @@ public class WindowMover : MonoBehaviour
 
     private void Awake()
     {
-        Screen.fullScreen = false;
+        
+        Screen.SetResolution(targetWidth, targetHeight, false);
+        
     }
     void Start()
     {
@@ -33,10 +44,11 @@ public class WindowMover : MonoBehaviour
 
         if (windowHandle != IntPtr.Zero)
         {
+            Screen.fullScreen = false;
             // Set the window to a known initial size for consistent movement
-            windowWidth = Screen.width;
-            windowHeight = Screen.height;
-            MoveWindow(windowHandle, 0, 0, windowWidth, windowHeight, true);
+            targetWidth = Screen.width;
+            targetHeight = Screen.height;
+            MoveWindow(windowHandle, 0, 0, targetWidth, targetHeight, true);
 
             // Start the random movement coroutine
             StartCoroutine(RandomlyMoveWindow());
@@ -47,6 +59,7 @@ public class WindowMover : MonoBehaviour
     {
         while (true)
         {
+            float delay = UnityEngine.Random.Range(3f, 5f);
             // Get screen dimensions
             int screenWidth = GetSystemMetrics(SM_CXSCREEN);
             int screenHeight = GetSystemMetrics(SM_CYSCREEN);
@@ -60,8 +73,31 @@ public class WindowMover : MonoBehaviour
             MoveWindow(windowHandle, randomX, randomY, windowWidth, windowHeight, true);
 
             // Wait for a random duration before moving again
-            float moveDelay = UnityEngine.Random.Range(1f, 3f);
-            yield return new WaitForSeconds(moveDelay);
+
+            //float moveDelay = UnityEngine.Random.Range(0, 3);
+            //yield return new WaitForSeconds(moveDelay);
         }
     }
+    public void Click()
+    {
+        //onClick.AddListener();
+        //onClickInvoke();
+        // Get screen dimensions
+        int screenWidth = GetSystemMetrics(SM_CXSCREEN);
+        int screenHeight = GetSystemMetrics(SM_CYSCREEN);
+
+        // Calculate random coordinates within screen boundaries
+        // We subtract window dimensions to keep the entire window visible
+        int randomX = UnityEngine.Random.Range(0, screenWidth - windowWidth);
+        int randomY = UnityEngine.Random.Range(0, screenHeight - windowHeight);
+
+        // Move the window to the new random position
+        MoveWindow(windowHandle, randomX, randomY, windowWidth, windowHeight, true);
+
+        // Wait for a random duration before moving again
+
+        //float moveDelay = UnityEngine.Random.Range(0, 3);
+        //yield return new WaitForSeconds(moveDelay);
+    }
 }
+
