@@ -5,10 +5,11 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Events;
+using JetBrains.Annotations;
 // Note to self: This is for me to learn it fully.
 public class WindowMover : MonoBehaviour
 {
-    public UnityEvent onClick;
+   
     public int targetWidth = 800;
     public int targetHeight = 600;
 
@@ -59,7 +60,8 @@ public class WindowMover : MonoBehaviour
     {
         while (true)
         {
-            float delay = UnityEngine.Random.Range(3f, 5f);
+           
+
             // Get screen dimensions
             int screenWidth = GetSystemMetrics(SM_CXSCREEN);
             int screenHeight = GetSystemMetrics(SM_CYSCREEN);
@@ -69,19 +71,19 @@ public class WindowMover : MonoBehaviour
             int randomX = UnityEngine.Random.Range(0, screenWidth - windowWidth);
             int randomY = UnityEngine.Random.Range(0, screenHeight - windowHeight);
 
+            float delay = UnityEngine.Random.Range(3f, 5f);
             // Move the window to the new random position
             MoveWindow(windowHandle, randomX, randomY, windowWidth, windowHeight, true);
 
             // Wait for a random duration before moving again
 
             //float moveDelay = UnityEngine.Random.Range(0, 3);
-            //yield return new WaitForSeconds(moveDelay);
+            yield return new WaitForSeconds(delay);
         }
     }
-    public void Click()
+     public void clicked()
     {
-        //onClick.AddListener();
-        //onClickInvoke();
+
         // Get screen dimensions
         int screenWidth = GetSystemMetrics(SM_CXSCREEN);
         int screenHeight = GetSystemMetrics(SM_CYSCREEN);
@@ -91,13 +93,15 @@ public class WindowMover : MonoBehaviour
         int randomX = UnityEngine.Random.Range(0, screenWidth - windowWidth);
         int randomY = UnityEngine.Random.Range(0, screenHeight - windowHeight);
 
+        //float delay = UnityEngine.Random.Range(3f, 5f);
         // Move the window to the new random position
         MoveWindow(windowHandle, randomX, randomY, windowWidth, windowHeight, true);
 
         // Wait for a random duration before moving again
 
         //float moveDelay = UnityEngine.Random.Range(0, 3);
-        //yield return new WaitForSeconds(moveDelay);
+        
     }
+   
 }
 
