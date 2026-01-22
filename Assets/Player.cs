@@ -12,6 +12,7 @@ public class Player : ScriptableObject
     [SerializeField] public int dashCooldown = 5;
     [SerializeField] public float dashDuration = 1.5f;
     [SerializeField] public float dashPower = 20f;
+    [SerializeField] public float iframeDuration = 1f;
 
     [Header("Player Status")]
     [SerializeField] public bool isAlive;

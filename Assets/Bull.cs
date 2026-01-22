@@ -6,12 +6,12 @@ public class Bull : MonoBehaviour
 
     void Start()
     {
-        //transform.bullet.rotation = Quaternion.Euler(0, 0, bullet.rotation);
+        transform.rotation = Quaternion.Euler(0, 0, bullet.rotation);
     }
 
     public void Update()
     {
-        //transform.Translate(bullet.velocity * bullet.speed * Time.deltaTime);
+        transform.Translate(bullet.velocity * bullet.speed * Time.deltaTime);
 
     }
 }

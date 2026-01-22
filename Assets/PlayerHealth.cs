@@ -37,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator IFramesCoroutine()
     {
         player.iframes = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(player.iframeDuration);
         player.iframes = false;
     }
 }

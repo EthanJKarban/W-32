@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31dff9e00d0426448ffca559b38e041, type: 3}
   m_Name: Player1
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  currentHealth: 10
   health: 10
-  speed: 5
+  speed: 104.07
   ospeed: 5
   damage: 2
   dashCooldown: 5
   dashDuration: 0.5
   dashPower: 2
-  isAlive: 0
+  iframeDuration: 1
+  isAlive: 1
   iframes: 0
   canDash: 0
   isDashing: 0

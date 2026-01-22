@@ -16,4 +16,5 @@ public class Bullet : ScriptableObject
     [SerializeField] public float spread;
     [SerializeField] public bool rewind;
     [SerializeField] public bool piercing;
+    [SerializeField] public Vector2 velocity;
 }
