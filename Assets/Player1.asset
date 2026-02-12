@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 10
   health: 10
-  speed: 104.07
+  speed: 5
   ospeed: 5
   damage: 2
   dashCooldown: 5
