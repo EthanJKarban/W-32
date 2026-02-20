@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: New Bullet
   m_EditorClassIdentifier: 
   speed: 5
-  rotation: 3
+  rotation: 99999
   damage: 1
   lifetime: 10
   bulletAmount: 1
   spread: 2
   rewind: 0
   piercing: 0
+  velocity: {x: 1, y: 0}
