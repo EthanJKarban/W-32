@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce85615fecc6c8841906226f7cbcfda4, type: 3}
   m_Name: New Bullet
   m_EditorClassIdentifier: 
-  speed: 5
-  rotation: 99999
+  speed: 10
+  rotation: 0
   damage: 1
   lifetime: 10
   bulletAmount: 1
-  spread: 2
+  spread: 0
   rewind: 0
   piercing: 0
   velocity: {x: 1, y: 0}

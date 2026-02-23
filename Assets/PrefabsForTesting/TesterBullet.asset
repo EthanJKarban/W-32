@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85615fecc6c8841906226f7cbcfda4, type: 3}
+  m_Name: TesterBullet
+  m_EditorClassIdentifier: 
+  speed: 0
+  rotation: 0
+  damage: 0
+  lifetime: 0
+  bulletAmount: 0
+  spread: 0
+  rewind: 0
+  piercing: 0
+  velocity: {x: 0, y: 0}
