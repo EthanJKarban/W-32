@@ -7,7 +7,7 @@ public class Bullet : ScriptableObject
     [SerializeField] public float speed;
     [SerializeField] public float rotation;
     [SerializeField] public float damage;
-    [SerializeField] public float lifetime;
+    [SerializeField] public float lifetime = 8;
     
     
 

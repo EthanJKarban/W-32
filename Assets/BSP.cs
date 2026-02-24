@@ -46,7 +46,7 @@ public class BSP : MonoBehaviour
             var fractionOfDifference = fraction * difference;
             rotations[i] = fractionOfDifference + bs.minRotation;
         }
-        foreach (var r in rotations) ;
+        foreach (var r in rotations) print(r);
         return rotations;
     }
 

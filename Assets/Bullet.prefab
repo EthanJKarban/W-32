@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5359844135986547651}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0.058385607, z: 0.036899365}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 11400000, guid: c91630557a654d44aad3dd85928674a2, type: 2}
+  spawnPoint: {x: 0, y: 0}
 --- !u!50 &445250951701968542
 Rigidbody2D:
   serializedVersion: 5

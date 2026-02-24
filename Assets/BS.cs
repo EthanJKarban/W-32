@@ -17,5 +17,6 @@ public class BS : ScriptableObject
     [SerializeField] public float bulletSpeed;
     [SerializeField] public Vector2 bulletVelocity;
 
+
     
 }

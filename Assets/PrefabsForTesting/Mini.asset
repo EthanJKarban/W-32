@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0b6cf47c55f0994e982598284ce51c5, type: 3}
-  m_Name: BulletSpawnerTest
+  m_Name: Mini
   m_EditorClassIdentifier: 
   bulletResources: {fileID: 5359844135986547651, guid: 0f251ffc42ac5f04b854ca4d72a395fa, type: 3}
   minRotation: 1
   maxRotation: 180
   numberOfBullets: 8
   isRandom: 0
-  cooldown: 1
-  bulletSpeed: 2
-  bulletVelocity: {x: 3, y: 0}
+  cooldown: 0.5
+  bulletSpeed: 0
+  bulletVelocity: {x: 1, y: 1}
