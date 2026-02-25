@@ -23,5 +23,5 @@ MonoBehaviour:
   iframeDuration: 1
   isAlive: 1
   iframes: 0
-  canDash: 0
+  canDash: 1
   isDashing: 0

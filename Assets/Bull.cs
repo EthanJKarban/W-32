@@ -6,8 +6,9 @@ using Unity.VisualScripting;
 public class Bull : MonoBehaviour
 {
     public Bullet bullet;
-    
 
+    public float setDamage;
+    public bool rewindNot = true;
     private float perBulletLifetime = 3;
     private float direction = 1;
 
@@ -15,7 +16,7 @@ public class Bull : MonoBehaviour
     
     void Start()
     {
-        
+        bullet.damage = setDamage;
         transform.rotation = Quaternion.Euler(0, 0, bullet.rotation);
     }
 
@@ -28,10 +29,19 @@ public class Bull : MonoBehaviour
         {
             if (bullet.rewind)
             {
-                perBulletLifetime = bullet.lifetime;
-                direction *= -1;
-
-                return;
+                if(rewindNot == true)
+                {
+                    perBulletLifetime = bullet.lifetime;
+                    direction *= -1;
+                    rewindNot = false;
+                    return;
+                }
+                if(rewindNot == false)
+                {
+                    Destroy(gameObject);
+                    return;
+                }
+               
             }
 
             Destroy(gameObject);
