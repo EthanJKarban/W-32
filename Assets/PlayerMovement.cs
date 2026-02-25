@@ -60,11 +60,18 @@ public class PlayerMovement : MonoBehaviour
         player.iframes = true;
         if (rb != null)
         {
+
             player.speed = player.speed * 2;
             rb.gravityScale = 0f;
             float dashDirectionX = transform.localScale.x;
+            
+
+            
+            rb.linearVelocityX = dashDirectionX * player.dashPower;
 
             rb.linearVelocity = new Vector2(dashDirectionX * player.dashPower, 0);
+            
+
         }
         yield return new WaitForSeconds(player.dashDuration);
 

@@ -18,5 +18,5 @@ MonoBehaviour:
   numberOfBullets: 8
   isRandom: 0
   cooldown: 1
-  bulletSpeed: 2
-  bulletVelocity: {x: 3, y: 0}
+  bulletSpeed: 3
+  bulletVelocity: {x: 4, y: 0}

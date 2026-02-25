@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
+        player.iframes = false;
         player.currentHealth = player.health;
         player.isAlive = true;
     }

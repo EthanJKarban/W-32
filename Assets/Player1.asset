@@ -19,9 +19,9 @@ MonoBehaviour:
   damage: 2
   dashCooldown: 5
   dashDuration: 0.5
-  dashPower: 2
+  dashPower: 10
   iframeDuration: 1
   isAlive: 1
-  iframes: 0
+  iframes: 1
   canDash: 1
   isDashing: 0

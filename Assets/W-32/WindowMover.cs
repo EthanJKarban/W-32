@@ -9,7 +9,8 @@ using JetBrains.Annotations;
 // Note to self: This is for me to learn it fully.
 public class WindowMover : MonoBehaviour
 {
-   
+    public float timer = 3;
+    public float Otimer = 3;
     public int targetWidth = 800;
     public int targetHeight = 600;
 
@@ -51,8 +52,18 @@ public class WindowMover : MonoBehaviour
             targetHeight = Screen.height;
             MoveWindow(windowHandle, 0, 0, targetWidth, targetHeight, true);
 
-            // Start the random movement coroutine
+            
+        }
+    }
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+
+        if (timer <= 0)
+        {
+            timer = Otimer;
             StartCoroutine(RandomlyMoveWindow());
+            
         }
     }
 
@@ -60,8 +71,8 @@ public class WindowMover : MonoBehaviour
     {
         while (true)
         {
-           
 
+            
             // Get screen dimensions
             int screenWidth = GetSystemMetrics(SM_CXSCREEN);
             int screenHeight = GetSystemMetrics(SM_CYSCREEN);
@@ -71,19 +82,22 @@ public class WindowMover : MonoBehaviour
             int randomX = UnityEngine.Random.Range(0, screenWidth - windowWidth);
             int randomY = UnityEngine.Random.Range(0, screenHeight - windowHeight);
 
-            float delay = UnityEngine.Random.Range(3f, 5f);
+            //float delay = UnityEngine.Random.Range(3f, 5f);
             // Move the window to the new random position
             MoveWindow(windowHandle, randomX, randomY, windowWidth, windowHeight, true);
 
             // Wait for a random duration before moving again
 
             //float moveDelay = UnityEngine.Random.Range(0, 3);
-            yield return new WaitForSeconds(delay);
+
+            GameController.Instance.ResetScore();
+            yield return new WaitForSeconds(3);
         }
     }
      public void clicked()
     {
 
+        timer = Otimer;
         // Get screen dimensions
         int screenWidth = GetSystemMetrics(SM_CXSCREEN);
         int screenHeight = GetSystemMetrics(SM_CYSCREEN);
