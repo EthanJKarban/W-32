@@ -61,6 +61,7 @@ public class WindowMover : MonoBehaviour
 
         if (timer <= 0)
         {
+            Debug.Log("Aw you took to long leading to a");
             timer = Otimer;
             StartCoroutine(RandomlyMoveWindow());
             
@@ -81,7 +82,7 @@ public class WindowMover : MonoBehaviour
             // We subtract window dimensions to keep the entire window visible
             int randomX = UnityEngine.Random.Range(0, screenWidth - windowWidth);
             int randomY = UnityEngine.Random.Range(0, screenHeight - windowHeight);
-
+            Debug.Log("Loss");
             //float delay = UnityEngine.Random.Range(3f, 5f);
             // Move the window to the new random position
             MoveWindow(windowHandle, randomX, randomY, windowWidth, windowHeight, true);
@@ -92,6 +93,9 @@ public class WindowMover : MonoBehaviour
 
             GameController.Instance.ResetScore();
             yield return new WaitForSeconds(3);
+
+            break;
+
         }
     }
      public void clicked()

@@ -26,5 +26,6 @@ public class GameController : MonoBehaviour
     {
         Debug.Log("You Lost, you loser!");
         score = 0;
+        return;
     }
 }
