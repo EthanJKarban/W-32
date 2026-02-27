@@ -344,6 +344,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da6b2d1fee29af4b9dcb9a5dd08d56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &845322167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845322169}
+  - component: {fileID: 845322170}
+  m_Layer: 0
+  m_Name: TitleChanga
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &845322169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845322167}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 559.5, y: 253.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &845322170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845322167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f0be2e8326c9a44b8cbaaeb011faf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newWindowTitle: Just keep clicking just keep clicking
+  clickedWindowTitle:
+  - Click!
+  - CLICK MAH SCREEN!!!
+  - Yay!!!
+  - yay
+  - Let's keep going!
+  - Come on! You are doing wonderful!
+  - Surely there is a reward just for you after this!
+  - Switch  hands when tired
+  - Wonderful!
+  - Make sure to click fast or you might restart
+  - Let's get it!
+  - Derek was here.
+  - I bet at this rate you could make it to 1000
+  - Really awesome!
+  - Keep at it!
+  - Superb work!
+  - Terrific!
+  leavingSoSoon: Leaving so soon? :<
 --- !u!1 &923469894
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +697,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1004398227}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: UpdateScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 845322170}
+        m_TargetAssemblyTypeName: TitleChange, Assembly-CSharp
+        m_MethodName: ClickTitle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1113,7 +1189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -328, y: 110}
+  m_AnchoredPosition: {x: -340, y: 110}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1943023416
@@ -1172,6 +1248,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 845322170}
+        m_TargetAssemblyTypeName: TitleChange, Assembly-CSharp
+        m_MethodName: LeaveTitle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Leaving so soon? :<
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1943023417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,3 +1308,4 @@ SceneRoots:
   - {fileID: 923469896}
   - {fileID: 1434648160}
   - {fileID: 1788769351}
+  - {fileID: 845322169}
