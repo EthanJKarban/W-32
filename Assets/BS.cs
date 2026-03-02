@@ -11,6 +11,7 @@ public class BS : ScriptableObject
     [SerializeField] public float maxRotation;
     [SerializeField] public int numberOfBullets;
     [SerializeField] public bool isRandom;
+    [SerializeField] public bool isParent;
 
     [Header("SpawnerStats")]
     [SerializeField] public float cooldown;

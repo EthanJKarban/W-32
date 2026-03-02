@@ -61,9 +61,19 @@ public class BSP : MonoBehaviour
         GameObject[] spawnedBullets = new GameObject[bs.numberOfBullets];
         for (int i = 0; i < bs.numberOfBullets; i++)
         {
-            spawnedBullets[i] = Instantiate(bs.bulletResources, transform);
+            //spawnedBullets[i] = BM.GetBulletFromPool();
+            if(spawnedBullets[i] == null)
+            {
+                spawnedBullets[i] = Instantiate(bs.bulletResources, transform);
 
-            spawnedBullets[i].GetComponent<Rigidbody2D>().rotation = rotations[i];
+            }
+            else
+            {
+                spawnedBullets[i].transform.SetParent(transform);
+                spawnedBullets[i].transform.localPosition = Vector2.zero;
+            }
+
+                spawnedBullets[i].GetComponent<Rigidbody2D>().rotation = rotations[i];
             spawnedBullets[i].GetComponent<Rigidbody2D>().linearVelocity = bs.bulletVelocity * bs.bulletSpeed;
         }   
         return spawnedBullets;

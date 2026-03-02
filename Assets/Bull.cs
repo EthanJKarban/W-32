@@ -9,19 +9,19 @@ public class Bull : MonoBehaviour
 
     public float setDamage;
     public bool rewindNot = true;
-    private float perBulletLifeTime = 3;
-    private float timer;
+    
+    
     private float direction = 1;
 
     [SerializeField] private Vector2 spawnPoint;
 
     private void Awake()
     {
-        timer = bullet.lifetime;
+        bullet.timer = bullet.lifetime;
     }
     void Start()
     {
-        perBulletLifeTime = timer;
+        bullet.perBulletLifeTime = bullet.timer;
         bullet.damage = setDamage;
         transform.rotation = Quaternion.Euler(0, 0, bullet.rotation);
     }
@@ -30,14 +30,14 @@ public class Bull : MonoBehaviour
     {
         transform.Translate(bullet.velocity * bullet.speed * Time.deltaTime * direction);
 
-        perBulletLifeTime -= Time.deltaTime;
-        if(perBulletLifeTime <= 0)
+        bullet.perBulletLifeTime -= Time.deltaTime;
+        if(bullet.perBulletLifeTime <= 0)
         {
             if (bullet.rewind)
             {
                 if(rewindNot == true)
                 {
-                    perBulletLifeTime = bullet.lifetime;
+                    bullet.perBulletLifeTime = bullet.lifetime;
                     direction *= -1;
                     rewindNot = false;
                     return;
@@ -51,7 +51,7 @@ public class Bull : MonoBehaviour
             }
 
             Destroy(gameObject);
-            perBulletLifeTime = bullet.lifetime;
+            bullet.perBulletLifeTime = bullet.lifetime;
         }
         
     }

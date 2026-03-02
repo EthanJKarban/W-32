@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BM : MonoBehaviour
 {
+    //public Bull bs;
     //public static List<GameObject> bullets;
     //private void Start()
     //{
@@ -15,8 +16,8 @@ public class BM : MonoBehaviour
     //    {
     //        if (!bullets[i].active)
     //        {
-    //            var b = bullets[i].GetComponent<Bullet>();
-    //            b.timer = b.lifeTime;
+    //            bullets[i].GetComponent<Bullet>();
+    //            bs.timer = bs.perBulletLifeTime;
     //            bullets[i].SetActive(true);
     //            return bullets[i];
     //        }
