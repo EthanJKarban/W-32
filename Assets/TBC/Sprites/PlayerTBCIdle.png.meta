@@ -235,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PlayerTBCIdle_0: 510795108684932723
+      PlayerTBCIdle_1: -8256520576320123102
+      PlayerTBCIdle_2: 7045860416000404519
+      PlayerTBCIdle_3: -6879261239944753350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
