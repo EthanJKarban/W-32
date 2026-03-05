@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Doodle-4.png_0: -2193485801704027337
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

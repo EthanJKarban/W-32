@@ -203,7 +203,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.25
+  m_fontSize: 27.7
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27
+  m_fontSize: 27.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -954,7 +954,7 @@ GameObject:
   - component: {fileID: 632342400}
   m_Layer: 0
   m_Name: Enemy(1)
-  m_TagString: Hero
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1386,7 +1386,6 @@ RectTransform:
   - {fileID: 973554273}
   - {fileID: 1363988755}
   - {fileID: 1062816707}
-  - {fileID: 1201333938}
   m_Father: {fileID: 1895641922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.44700003, y: 0}
@@ -1458,6 +1457,18 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 23.4
       objectReference: {fileID: 0}
+    - target: {fileID: 2791222214316362284, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791222214316362284, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791222214316362284, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3471643357475820309, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_Name
       value: HeroBar
@@ -1476,15 +1487,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5744387671488008554, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.24279785
+      value: -0.24279594
       objectReference: {fileID: 0}
     - target: {fileID: 6396006285829479042, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 7370014019251780285, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.80300003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370014019251780285, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.574
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370014019251780285, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.1684
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370014019251780285, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.2428
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370014019251780285, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.42645264
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370014019251780285, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.24279785
+      value: -0.12139988
       objectReference: {fileID: 0}
     - target: {fileID: 7506580340144682721, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_Name
@@ -1552,7 +1583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7664055721999660148, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.119506836
+      value: -0.11953735
       objectReference: {fileID: 0}
     - target: {fileID: 7664055721999660148, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1675,7 +1706,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.25
+  m_fontSize: 27.7
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1811,7 +1842,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27
+  m_fontSize: 27.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2132,7 +2163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4667894420530168733, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.23360443
+      value: -0.23360634
       objectReference: {fileID: 0}
     - target: {fileID: 5038363390499488353, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2140,11 +2171,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5744387671488008554, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.24279785
+      value: -0.24280167
       objectReference: {fileID: 0}
     - target: {fileID: 7370014019251780285, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.24279785
+      value: -0.24280167
       objectReference: {fileID: 0}
     - target: {fileID: 7506580340144682721, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_Name
@@ -2212,7 +2243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7664055721999660148, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.119506836
+      value: -0.11953735
       objectReference: {fileID: 0}
     - target: {fileID: 7664055721999660148, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2416,7 +2447,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27
+  m_fontSize: 27.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2543,41 +2574,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192142962}
   m_CullTransparentMesh: 1
---- !u!1 &1201333937
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1201333938}
-  m_Layer: 5
-  m_Name: LayoutGroupHeroBars
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1201333938
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201333937}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 957568668}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -452, y: -59}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1363988754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2622,7 +2618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5744387671488008554, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.24279785
+      value: -0.24279308
       objectReference: {fileID: 0}
     - target: {fileID: 6396006285829479042, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2630,7 +2626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7370014019251780285, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.24279785
+      value: -0.24279308
       objectReference: {fileID: 0}
     - target: {fileID: 7506580340144682721, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_Name
@@ -2698,7 +2694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7664055721999660148, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.119506836
+      value: -0.11953735
       objectReference: {fileID: 0}
     - target: {fileID: 7664055721999660148, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3173,7 +3169,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27
+  m_fontSize: 27.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3225,6 +3221,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761188952}
   m_CullTransparentMesh: 1
+--- !u!1 &1765975060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765975062}
+  - component: {fileID: 1765975061}
+  m_Layer: 0
+  m_Name: BattleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1765975061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765975060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c70fdbd36b1244fac21f638207cf37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleStates: 0
+  HerosInFight: []
+  EnemiesInFight: []
+--- !u!4 &1765975062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765975060}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 264.73535, y: 83.5459, z: 1.1931117}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1799996415
 GameObject:
   m_ObjectHideFlags: 0
@@ -3423,7 +3466,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27
+  m_fontSize: 27.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3488,7 +3531,7 @@ GameObject:
   - component: {fileID: 1890686269}
   m_Layer: 0
   m_Name: Enemy(2)
-  m_TagString: Hero
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7564,7 +7607,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27
+  m_fontSize: 27.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7632,10 +7675,6 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 10.8
       objectReference: {fileID: 0}
-    - target: {fileID: 2440617202724504281, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
-      propertyPath: m_fontSize
-      value: 23.45
-      objectReference: {fileID: 0}
     - target: {fileID: 3471643357475820309, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_Name
       value: HeroBar
@@ -7654,15 +7693,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5038363390499488353, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.16130066
+      value: -0.1612997
       objectReference: {fileID: 0}
     - target: {fileID: 5744387671488008554, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.24279785
+      value: -0.24279594
       objectReference: {fileID: 0}
     - target: {fileID: 7370014019251780285, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.24279785
+      value: -0.24279594
       objectReference: {fileID: 0}
     - target: {fileID: 7664055721999660148, guid: eb6494ffab540a948921ef05b3fe01c2, type: 3}
       propertyPath: m_Pivot.x
@@ -7766,3 +7805,4 @@ SceneRoots:
   - {fileID: 894812689}
   - {fileID: 1895641922}
   - {fileID: 93290265}
+  - {fileID: 1765975062}
