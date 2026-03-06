@@ -14,6 +14,7 @@ public class BattleStateMachines : MonoBehaviour
     public PerformAction battleStates;
 
     public List<TurnHandler> PerformList = new List<TurnHandler>();
+
     public List<GameObject> HerosInFight = new List<GameObject>();
     public List<GameObject> EnemiesInFight = new List<GameObject>();
 
@@ -45,5 +46,10 @@ public class BattleStateMachines : MonoBehaviour
         }
         
     }
+    public void CollectActions(TurnHandler input)
+    {
+        PerformList.Add(input);
+    }
+
     
 }
