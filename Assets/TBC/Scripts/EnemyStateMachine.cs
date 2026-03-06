@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -21,6 +22,8 @@ public class EnemyStateMachine : MonoBehaviour
     private float max_cooldown = 5f;
 
     private Vector3 startPosition;
+
+    private bool actionActive = false;
     
     void Start()
     {
@@ -79,5 +82,23 @@ public class EnemyStateMachine : MonoBehaviour
         myAttack.AttackerObject = this.gameObject;
         myAttack.AttackersTarget = BSM.HerosInFight[Random.Range(0, BSM.HerosInFight.Count)];
         BSM.CollectActions(myAttack);
+    }
+
+    private IEnumerator TimeForAction()
+    {
+        if(actionActive)
+        {
+            yield break;
+        }
+        
+        actionActive = true;
+
+        //animate the enemy near the hero to hit
+
+        //wait
+
+        //damage
+
+        //animate back to start
     }
 }
