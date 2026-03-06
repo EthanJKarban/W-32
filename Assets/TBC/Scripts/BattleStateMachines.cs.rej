@@ -1,0 +1,9 @@
+diff a/Assets/TBC/Scripts/BattleStateMachines.cs b/Assets/TBC/Scripts/BattleStateMachines.cs	(rejected hunks)
+@@ -14,7 +14,6 @@
+     public PerformAction battleStates;
+ 
+     public List<TurnHandler> PerformList = new List<TurnHandler>();
+-
+     public List<GameObject> HerosInFight = new List<GameObject>();
+     public List<GameObject> EnemiesInFight = new List<GameObject>();
+ 

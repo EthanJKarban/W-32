@@ -1,20 +1,17 @@
-<<<<<<< HEAD
 using System.Collections;
 using System.Xml.Serialization;
-=======
->>>>>>> parent of e722991 (Idk atm)
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class EnemyStateMachine : MonoBehaviour
 {
+    private BattleStateMachines BSM;
     public BaseEnemy enemy;
     public enum TurnState
     {
         PROCESSING,
-        ADDTOLIST,
+        CHOOSEACTION,
         WAITING,
-        SELECTING,
         ACTION,
         DEAD
     }
@@ -23,7 +20,6 @@ public class EnemyStateMachine : MonoBehaviour
     //For progress bar
     private float cur_cooldown = 0f;
     private float max_cooldown = 5f;
-<<<<<<< HEAD
 
     private Vector3 startPosition;
 
@@ -31,12 +27,11 @@ public class EnemyStateMachine : MonoBehaviour
     public GameObject targetHero;
     private float animSpeed = 5f;
 
-=======
-    
->>>>>>> parent of e722991 (Idk atm)
     void Start()
     {
         currentState = TurnState.PROCESSING;
+        BSM = GameObject.Find("BattleManager").GetComponent<BattleStateMachines>();
+            startPosition = transform.position;
     }
 
     void Update()
@@ -50,17 +45,13 @@ public class EnemyStateMachine : MonoBehaviour
 
                 break;
 
-            case (TurnState.ADDTOLIST):
+            case (TurnState.CHOOSEACTION):
 
-
+                ChooseAction();
+                currentState = TurnState.WAITING;
                 break;
 
             case (TurnState.WAITING):
-
-
-                break;
-
-            case (TurnState.SELECTING):
 
 
                 break;
@@ -82,10 +73,9 @@ public class EnemyStateMachine : MonoBehaviour
         
         if (cur_cooldown >= max_cooldown)
         {
-            currentState = TurnState.ADDTOLIST;
+            currentState = TurnState.CHOOSEACTION;
         }
     }
-<<<<<<< HEAD
 
    void ChooseAction()
     {
@@ -132,6 +122,4 @@ public class EnemyStateMachine : MonoBehaviour
     {
         return target != (transform.position = Vector3.MoveTowards(transform.position, target, animSpeed * Time.deltaTime));
     }
-=======
->>>>>>> parent of e722991 (Idk atm)
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[System.Serializable]
 public class TurnHandler
 {
     public string Attacker; // Attacker's name
