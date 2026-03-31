@@ -1,0 +1,22 @@
+VisualElement {
+}
+
+Button {
+}
+
+#A {
+    --new-var-1: rgb(255, 69, 69);
+    visibility: visible;
+    border-left-color: rgb(255, 42, 42);
+    border-right-color: rgb(255, 42, 42);
+    border-top-color: rgb(255, 42, 42);
+    border-bottom-color: rgb(255, 42, 42);
+    border-left-width: 785px;
+    border-right-width: 899px;
+    border-top-left-radius: 708px;
+    border-top-width: 2302px;
+    border-top-right-radius: 764px;
+    border-bottom-left-radius: 42px;
+    border-bottom-right-radius: 42px;
+    border-bottom-width: 5886px;
+}
