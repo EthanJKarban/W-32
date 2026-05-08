@@ -40,7 +40,7 @@ public class BattleStateMachines : MonoBehaviour
                 break;
 
             case PerformAction.TAKEACTION:
-                GameObject performer = GameObject.Find (PerformList[0].Attacker);
+                GameObject performer = GameObject.Find(PerformList[0].Attacker);
                 if (PerformList[0].Type == "Enemy")
                 {
                    EnemyStateMachine ESM = performer.GetComponent<EnemyStateMachine>();
