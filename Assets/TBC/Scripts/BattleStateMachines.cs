@@ -43,7 +43,7 @@ public class BattleStateMachines : MonoBehaviour
                 GameObject performer = GameObject.Find(PerformList[0].Attacker);
                 if (PerformList[0].Type == "Enemy")
                 {
-                   EnemyStateMachine ESM = performer.GetComponent<EnemyStateMachine>();
+                    EnemyStateMachine ESM = performer.GetComponent<EnemyStateMachine>();
                    ESM.targetHero = PerformList [0].AttackersTarget;
                    ESM.currentState = EnemyStateMachine.TurnState.ACTION;
                 }
